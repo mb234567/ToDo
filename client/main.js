@@ -5,7 +5,8 @@ import bootstrap from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.html'; 
-import './AddProfile/AddProfile.html';
+import './AddProfile/AddProfile.html'; 
+import './AddTask/AddTask.html';
 
 
 

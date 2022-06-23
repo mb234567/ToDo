@@ -2,3 +2,16 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+#login-sign-in-link{
+  color: white;
+} 
+
+.asi { 
+  align-items:stretch
+} 
+
+.asi .current-rating {
+  color: blueviolet;
+}
+  

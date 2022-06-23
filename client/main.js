@@ -6,13 +6,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.html'; 
 import './AddProfile/AddProfile.html'; 
-import './AddTask/AddTask.html';
+import './AddTask/AddTask.html'; 
+import './Motivation/Motivation.html';
 
 
 
 Template.nav.events({
   'click .js-add'() {
     $("#addModal").modal("show");
+  }
+}); 
+
+Template.nav.events({
+  'click .js-add2'() { 
+    $("#addModal2").modal("show");
   }
 });
 

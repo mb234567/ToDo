@@ -27,3 +27,4 @@ blaze-hot               # Update files using Blaze's API with HMR
 accounts-ui-unstyled
 accounts-password
 barbatus:stars-rating
+aadams:progress

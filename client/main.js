@@ -9,7 +9,10 @@ import './AddProfile/AddProfile.html';
 import './AddProfile/AddProfile.js'; 
 import './AddTask/AddTask.html'; 
 import './Motivation/Motivation.html'; 
-import './Navbar/Navbar.html';
+import './Navbar/Navbar.html'; 
+import './ConfirmDelete/ConfirmDelete.html'; 
+import './ConfirmDelete/ConfirmDelete.js'; 
+
 
 
 
@@ -23,7 +26,13 @@ Template.nav.events({
   'click .js-add2'() { 
     $("#addModal2").modal("show");
   }
-});
+}); 
+
+Template.AddProf.events({
+  'click .js-delete' () {
+    $("#AddModal3").modal("show");
+  }
+})
 
 // Template.hello.onCreated(function helloOnCreated() {
 //   // counter starts at 0

@@ -28,11 +28,11 @@ Template.AddProf.events({
       let sex = $("#FSex").val();
       let fname = $("#FN").val();
       let lname = $("#LN").val(); 
-    //   let WEbDesign = $("#WebD").val(); 
-    //   let WebMakeup = $("#WebM").val();  
-    //   let FEnd = $("#FE").val(); 
-    //   let BEnd = $("#BE").val(); 
-    //   prompt("Your Info Has been saved");
+      let WEbDesign = $("#WebD").val(); 
+      let WebMakeup = $("#WebM").val();  
+      let FEnd = $("#FE").val(); 
+      let BEnd = $("#BE").val(); 
+      //  prompt("Your Info Has been saved");
 
       if (validateAddForm(fname, lname)) { 
         Meteor.users.update({_id:Meteor.userId()}, 
@@ -46,7 +46,7 @@ Template.AddProf.events({
                 // "profile.BE": BEnd,
                 "profile.createdOn": new Date().getTime()
             } 
-
+           
             
         });
     } //end IF

@@ -1,4 +1,4 @@
-Template.ConfirmDel.events({
+Template.AddProf.events({
     'click .js-delete3'() { 
         $("#AddModal3").modal("hide");  
         $("#FN").val("");  
@@ -8,6 +8,8 @@ Template.ConfirmDel.events({
         $("#WebM").val(""); 
         $("#FE").val(""); 
         $("#BE").val(""); 
+        $("#newtask`").val("");
+        
         console.log("Negro")
        }
 });

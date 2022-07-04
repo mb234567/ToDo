@@ -12,6 +12,11 @@ import './Motivation/Motivation.html';
 import './Navbar/Navbar.html'; 
 import './ConfirmDelete/ConfirmDelete.html'; 
 import './ConfirmDelete/ConfirmDelete.js'; 
+import './Private1/Private.html';
+import './Private1/Private.js'; 
+import './AddTask2/AddTask.html'; 
+import './AddTask2/AddTask.js';
+
 
 
 

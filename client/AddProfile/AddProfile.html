@@ -28,9 +28,7 @@
               <ul class="list-group list-group-flush rounded-3"> 
                 <button type="button" class="btn btn-primary js-saveInfo">Add Task</button> 
                 <button type="button" class="btn btn-danger">Progress Rate</button> 
-                <button type="button" class="btn btn-secondary">Private</button> 
-                <i class="fa-solid fa-check"></i>
-                
+                <button type="button" class="btn btn-secondary js-add4">Private</button> 
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fas fa-globe fa-lg text-warning"></i>
                   <p class="mb-0"></p> 
@@ -81,24 +79,30 @@
                   </select>
                 </div>
                 <h4>Task To be Completed</h4> 
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text" >Web Design</span>
-                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id = "WebD">
-                </div>
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text" >Website Makeup</span>
-                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id = "WebM">
-                </div> 
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text" >Front End</span>
-                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id = "FE">
-                </div> 
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text" >Back End</span>
-                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" id = "BE"> 
-                </div> 
+                <div class="row">
+                  <div class="col-xl-6 addTaskFrame-top pt-4 px-5">
+                      <div class="input-group mb-3" id="js-addTaskGroup">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-list-check"></i></span>
+                          <input type="text" class="form-control inputTaskS" id="newTask" placeholder="Add Task" aria-label="Username" aria-describedby="button-addon2">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xl-6 addTaskFrame-sides px-5 py-2 text-end">
+                      <div class="privateTask inputTaskSize">
+                          <span>Private</span>
+                          <i class="fa-solid fa-check d-none"></i>
+                          <i class="fa-solid fa-xmark"></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-xl-6 addTaskFrame-bottom px-5 pb-4 pt-2 text-end">
+          
+                  </div>
+              </div>
 
-                <button type="button" class="btn btn-info  js-delete">Delete</button>
+                <button type="button" class="btn btn-info  js-delete3">Delete</button>
                 
               </div>
              </div>

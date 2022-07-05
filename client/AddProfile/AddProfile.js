@@ -1,6 +1,6 @@
 
 const alertMsg = (message, type) => {
-    const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder'); 
     const wrapper = document.createElement('div')
     wrapper.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
@@ -9,13 +9,17 @@ const alertMsg = (message, type) => {
         '</div>'
     ].join('');
 
-    alertPlaceholder.append(wrapper);
-}
+    alertPlaceholder.append(wrapper); 
+  }
+    
+
+
 
 Template.AddProf.helpers({
     userData(){
         return Meteor.users.find({_id:Meteor.userId()});
     }
+    
 });
 
 Template.AddProf.events({
@@ -24,9 +28,6 @@ Template.AddProf.events({
         alertMsg('Following', 'success');
     }, 
 
-    'click #AlertBtn' (){
-     alertMsg('This Task Has Been Privated',  'danger') 
-    },
     
     'click .js-saveInfo'() {
       // grad data from fields
@@ -37,7 +38,10 @@ Template.AddProf.events({
       let WebMakeup = $("#WebM").val();  
       let FEnd = $("#FE").val(); 
       let BEnd = $("#BE").val(); 
-      //  prompt("Your Info Has been saved");
+      let NTask = $("NT").val(); 
+      let DateT = $("DT").val();
+      //  prompt("Your Info Has been saved"); 
+
 
       if (validateAddForm(fname, lname)) { 
         Meteor.users.update({_id:Meteor.userId()}, 
@@ -51,11 +55,18 @@ Template.AddProf.events({
                 // "profile.BE": BEnd,
                 "profile.createdOn": new Date().getTime()
             } 
+         
            
             
-        });
-    } //end IF
-}   
+        }); 
+        addNewTask();
+       
+    } //end IF 
+    
+}, 
+  'click  .js-add5'() {
+    $("#LModal").modal("show"); 
+  }
 });
 
 
@@ -64,11 +75,11 @@ Template.AddProf.events({
     $("#FN").removeClass("errorBox");
     $("#LN").removeClass("errorBox");
   
-    if (!fn) {
+    if (fn=="") {
       $("#FN").addClass("errorBox");
       valid = false;
     }
-    if (!ln) {
+    if (ln=="") {
       $("#LN").addClass("errorBox");
       valid = false;
     }
@@ -84,15 +95,11 @@ Template.AddProf.events({
   
   'click .js-delete4' () {
         $("#AddM4").modal("hide");
-      } 
-    });
-  
-    
-     Template.AddProf.events({
+      } ,
       'click #js-add'() {
               addNewTask();
           },
-        'keypress #newTask'(event){
+        'keypress #NT'(event){
           if(event.keyCode == 13) {
                   addNewTask();
               }
@@ -111,23 +118,24 @@ Template.AddProf.events({
   
   let validateTask = (task) => {
       let valid = true;
-      $("#js-addTaskGroup").removeClass("errorBox");
+      $("#js-addTaskGroup1").removeClass("errorBox");
       if(task == ""){
           //console.log("Cannot be empty")
-          $("#js-addTaskGroup").addClass("errorBox");
+          $("#js-addTaskGroup1").addClass("errorBox");
           valid = false;
       }
       return valid;
   }
   
   let addNewTask = () => {
-      let newTask = $("#newTask").val();
+      let newTask = $("#NT").val();
       if (validateTask(newTask)) {
-          tododb.insert({
+          ToDodb.insert({
               "task": newTask,
               "private" : $(".fa-xmark").hasClass("d-none")
           });
-          $("#newTask").val("");
+          $("#NT").val("");
+          $("#LModal").modal("show"); 
       }
       
   }

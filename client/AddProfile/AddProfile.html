@@ -26,9 +26,7 @@
           <div class="card mb-4 mb-lg-0">
             <div class="card-body p-0">
               <ul class="list-group list-group-flush rounded-3"> 
-                <button type="button" class="btn btn-primary js-saveInfo">Add Task</button> 
                 <button type="button" class="btn btn-danger">Progress Rate</button> 
-                <button type="button" class="btn btn-secondary js-add4">Private</button> 
                 <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                   <i class="fas fa-globe fa-lg text-warning"></i>
                   <p class="mb-0"></p> 
@@ -78,29 +76,42 @@
                     <option value="3">Undecided</option>
                   </select>
                 </div>
-                <h4>Task To be Completed</h4> 
+                
+              <div class="row">
+                  <div class="col-xl-6"> 
+
+          <h4>Task To be Completed</h4> 
                 <div class="row">
-                  <div class="col-xl-6 addTaskFrame-top pt-4 px-5">
-                      <div class="input-group mb-3" id="js-addTaskGroup">
+                  <div class="col-xl-12 addTaskFrame-top pt-4 px-5">
+                      <div class="input-group mb-3" id="js-addTaskGroup1">
                           <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-list-check"></i></span>
-                          <input type="text" class="form-control inputTaskS" id="newTask" placeholder="Add Task" aria-label="Username" aria-describedby="button-addon2">
+                          <input type="text" class="form-control inputTaskS" id="NT" placeholder="Add Task" aria-label="Username" aria-describedby="button-addon2"> 
+                          
                       </div>
                   </div>
               </div>
               <div class="row">
-                  <div class="col-xl-6 addTaskFrame-sides px-5 py-2 text-end">
+                  <div class="col-xl-12 addTaskFrame-sides px-5 py-2 text-end">
                       <div class="privateTask inputTaskSize">
                           <span>Private</span>
                           <i class="fa-solid fa-check d-none"></i>
                           <i class="fa-solid fa-xmark"></i>
-                      </div>
+                      </div> 
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="DT">Due Date</span>
+                        <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div> 
+                      <button type="button" class="btn btn-primary js-saveInfo " id = "AlerBtn">Add Task</button> 
                   </div>
               </div>
-              <div class="row">
-                  <div class="col-xl-6 addTaskFrame-bottom px-5 pb-4 pt-2 text-end">
-          
+                  </div> 
+                  <div class="col-xl-6">
+
+                    <!-- List Tasks -->
+                    <button type="button" class="btn btn-primary js-add5">List</button>
                   </div>
-              </div>
+              </div> 
+              
 
                 <button type="button" class="btn btn-info  js-delete3">Delete</button>
                 

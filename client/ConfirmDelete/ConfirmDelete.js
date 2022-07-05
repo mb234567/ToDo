@@ -8,8 +8,8 @@ Template.AddProf.events({
         $("#WebM").val(""); 
         $("#FE").val(""); 
         $("#BE").val(""); 
-        $("#newtask`").val("");
+        $("#NT").val(""); 
         
-        console.log("Negro")
+       // console.log("Negro")
        }
 });

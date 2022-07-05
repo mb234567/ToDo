@@ -6,8 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './main.html'; 
 import './AddProfile/AddProfile.html'; 
-import './AddProfile/AddProfile.js'; 
-import './AddTask/AddTask.html'; 
+import './AddProfile/AddProfile.js';  
 import './Motivation/Motivation.html'; 
 import './Navbar/Navbar.html'; 
 import './ConfirmDelete/ConfirmDelete.html'; 
@@ -15,17 +14,14 @@ import './ConfirmDelete/ConfirmDelete.js';
 import './Private1/Private.html';
 import './Private1/Private.js'; 
 import './AddTask2/AddTask.html'; 
-import './AddTask2/AddTask.js';
+import './AddTask2/AddTask.js'; 
+import './List Tasks/ListTasks.html';
+import './List Tasks/ListTasks.js';
 
 
 
 
 
-Template.nav.events({
-  'click .js-add'() {
-    $("#addModal").modal("show");
-  }
-}); 
 
 Template.nav.events({
   'click .js-add2'() { 

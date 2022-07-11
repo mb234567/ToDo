@@ -17,7 +17,8 @@ import './AddTask2/AddTask.html';
 import './AddTask2/AddTask.js'; 
 import './List Tasks/ListTasks.html';
 import './List Tasks/ListTasks.js';
-
+import './Trashbin/Trashbin.html';
+import './Trashbin/Trashbin.js';
 
 
 

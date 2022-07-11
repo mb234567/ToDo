@@ -9,13 +9,14 @@
             <div class="modal-body">
                 <ul class="list-group">
                     {{#each theTasks}}
-                <li class="list-group-item">{{task}}</li>
+                <li class="list-group-item">{{task}}
+                  <i class="fa-solid fa-trash js-trash"></i>
+                </li> 
                 {{/each}}
-                  </ul>
+                  </ul> 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-              <button type="button" class="btn btn-danger   js-delete5">Delete</button>
+             <button type="button" class="btn btn-danger   js-delete5">Delete</button>
             </div>
           </div>
         </div>

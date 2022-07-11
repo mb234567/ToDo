@@ -1,0 +1,22 @@
+<template name = "TB">
+     <div class="row">
+        <div class="col-xl-12"> 
+            <div class="collapse" id = "ColTrashBin">
+                <ul class="list-group">
+                    {{#each theTasks}}
+                <li class="list-group-item">{{task}}
+                  <i class="fa-solid fa-trash js-trash"></i>
+                </li> 
+                {{/each}}
+                  </ul> 
+            </div>
+            <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Trash Bin
+                </a>
+                
+              </p>
+              
+        </div>
+     </div>
+</template>

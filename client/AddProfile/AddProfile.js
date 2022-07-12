@@ -132,12 +132,32 @@ Template.AddProf.events({
       if (validateTask(newTask)) {
           ToDodb.insert({
               "task": newTask,
-              "private" : $(".fa-xmark").hasClass("d-none")
-          });
+              "private" : $(".fa-xmark").hasClass("d-none"),
+              "trashBin": false 
+                });
           $("#NT").val("");
           $("#LModal").modal("show"); 
       }
       
   }
+ 
+ Template.AddProf.events({
+   'click .js-complete'() {
+       document.querySelector("#NT").disabled = true;
+       document.querySelector("#DT").disabled = true; 
+       $("#CModal").modal("show"); 
+
+   },
+   
+   'click .js-complete2'() {
+    document.querySelector("#NT").disabled = false;
+    document.querySelector("#DT").disabled = false; 
+    $("#CModal").modal("hide"); 
+
+   }
+
+
+
+    })
 
   

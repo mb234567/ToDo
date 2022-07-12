@@ -44,4 +44,13 @@ body {
 
 .privateTask {
   cursor: pointer;
-}
+} 
+
+
+.taskdel {
+  float: right;
+} 
+
+.privatetask {
+  float: right;
+} 

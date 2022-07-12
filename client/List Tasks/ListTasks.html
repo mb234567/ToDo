@@ -10,13 +10,16 @@
                 <ul class="list-group">
                     {{#each theTasks}}
                 <li class="list-group-item">{{task}}
-                  <i class="fa-solid fa-trash js-trash"></i>
+                  <i class="fa-solid fa-trash js-trash"></i>  
+                  <i class="fa-solid fa-hourglass"></i> 
+                  <i class="fa-solid fa-business-time"></i> 
+                  {{task}} {{#if private}}[private]{{/if}} 
                 </li> 
                 {{/each}}
                   </ul> 
             </div>
             <div class="modal-footer">
-             <button type="button" class="btn btn-danger   js-delete5">Delete</button>
+             <button type="button" class="btn btn-danger   js-delete5">Close</button>
             </div>
           </div>
         </div>

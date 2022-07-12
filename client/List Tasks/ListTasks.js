@@ -1,6 +1,6 @@
 Template.ListT.helpers({
     theTasks(){
-        return ToDodb.find();
+        return ToDodb.find({"trashBin": false});
     }
 }) 
 
@@ -10,15 +10,18 @@ Template.ListT.events({
         console.log("nigger")
     }, 
 
-    'click .js-trash' () {
+    'click .js-trash' () { 
+        console.log(this)
        let taskId = this._id; 
-       console.log(this) ;
-       ToDo.update({ _id: taskId },{
+       ToDodb.update({ _id: taskId},  { 
         $set: {
-            "trashbin" : true 
-        }
-    })
-    }
+            "trashBin": true
+        } 
+         
+       });  
+      
+       
+       }
 
-}) 
+});
 

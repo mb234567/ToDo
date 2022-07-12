@@ -91,17 +91,22 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="col-xl-12 addTaskFrame-sides px-5 py-2 text-end">
+                  <div class="col-xl-12 addTaskFrame-sides px-5 py-2 text-end" id = "ADF">
                       <div class="privateTask inputTaskSize">
                           <span>Private</span>
                           <i class="fa-solid fa-check d-none"></i>
                           <i class="fa-solid fa-xmark"></i>
                       </div> 
                       <div class="input-group mb-3">
-                        <span class="input-group-text" id="DT">Due Date</span>
-                        <input type="date" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                      </div> 
-                      <button type="button" class="btn btn-primary js-saveInfo " id = "AlerBtn">Add Task</button> 
+                        <span class="input-group-text">Due Date</span>
+                        <input type="date" class="form-control" id="DT" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                      </div>  
+                      <button type="button" class="btn btn-success js-complete">Complete</button> 
+                      <i class="fa-solid fa-hand js-complete2"></i>
+                      <div class="row my-3">
+                        <button type="button" class="btn btn-primary js-saveInfo " id = "AlerBtn">Add Task</button> 
+                      </div>
+                     
                   </div>
               </div>
                   </div> 

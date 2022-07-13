@@ -1,3 +1,4 @@
+import date from 'date-and-time';
 
 const alertMsg = (message, type) => {
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder'); 
@@ -39,7 +40,14 @@ Template.AddProf.events({
       let FEnd = $("#FE").val(); 
       let BEnd = $("#BE").val(); 
       let NTask = $("NT").val(); 
-      let DateT = $("DT").val();
+      let DateT = $("DT").val();   
+
+      if ($(".fa-xmark").hasClass("d-none")) {
+         $(".fa-xmark").removeClass("d-none");
+         $(".fa-check").addClass("d-none"); 
+      }
+      
+
       //  prompt("Your Info Has been saved"); 
 
 
@@ -104,7 +112,7 @@ Template.AddProf.events({
                   addNewTask();
               }
           },
-        'click .privateTask'() {
+        'click .privateTask'() { 
           if ($(".fa-xmark").hasClass("d-none")) {
               $(".fa-check").addClass("d-none");
               $(".fa-xmark").removeClass("d-none");
@@ -128,7 +136,18 @@ Template.AddProf.events({
   }
   
   let addNewTask = () => {
-      let newTask = $("#NT").val();
+      let newTask = $("#NT").val(); 
+      let duedate = $("#DT").val(); 
+      if (!duedate) {
+        duedate = new Date(); 
+        duedate = date.addDays(duedate, 1);   
+        $("#DT").val(date.format(duedate, 'YYYY-MM-DD'));
+        } 
+      else {
+        duedate =  date.parse(duedate, 'YYYY-MM-DD')
+      }
+        // console.log("days remaining:", Math.round(date.subtract(duedate, new Date()).toDays())); 
+     
       if (validateTask(newTask)) {
           ToDodb.insert({
               "task": newTask,

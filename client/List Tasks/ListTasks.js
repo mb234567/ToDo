@@ -1,6 +1,9 @@
 Template.ListT.helpers({
     theTasks(){
-        return ToDodb.find({"trashBin": false});
+        if (Meteor.userId()){
+            return ToDodb.find({"trashBin": false }, {sort:{"duedate": 1 }})
+        } 
+        return ToDodb.find({"trashBin": false, "private":false});
     }
 }) 
 

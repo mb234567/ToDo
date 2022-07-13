@@ -6,7 +6,17 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>Your Task Has Been Completed.</p>
+          <p>Your Task Has Been Completed.</p> 
+          <ul class="list-group">
+            {{#each theTasks}}
+        <li class="list-group-item">{{task}}
+          <i class="fa-solid fa-trash js-trash"></i>  
+          <i class="fa-solid fa-hourglass"></i> 
+          <i class="fa-solid fa-business-time"></i> 
+          {{task}} {{#if private}}[private]{{/if}} 
+        </li> 
+        {{/each}}
+          </ul> 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

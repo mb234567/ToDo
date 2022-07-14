@@ -54,3 +54,11 @@ body {
 .privatetask {
   float: right;
 } 
+
+.Icons {
+  float: right;
+} 
+
+.Chand {
+  cursor: pointer;
+}

@@ -146,12 +146,13 @@ Template.AddProf.events({
       else {
         duedate =  date.parse(duedate, 'YYYY-MM-DD')
       }
-        // console.log("days remaining:", Math.round(date.subtract(duedate, new Date()).toDays())); 
+         console.log("days remaining:", Math.round(date.subtract(duedate, new Date()).toDays())); 
      
       if (validateTask(newTask)) {
           ToDodb.insert({
               "task": newTask,
-              "private" : $(".fa-xmark").hasClass("d-none"),
+              "private" : $(".fa-xmark").hasClass("d-none"), 
+              "DT": duedate,
               "trashBin": false 
                 });
           $("#NT").val("");

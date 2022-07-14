@@ -9,11 +9,17 @@
 
             <div class="modal-body">
                 <ul class="list-group">
-                    {{#each theTasks}}
-                <li class="list-group-item">{{task}}&nbsp;{{duedate}}
-                  <i class="fa-solid fa-trash js-trash"></i>  
-                  <i class="fa-solid fa-business-time"></i> 
-                   {{#if private}}[private] {{/if}} 
+                    {{#each theTasks}} 
+                    <li class="list-group-item">{{task}}
+                  <div class="Icons">
+                     <i class="fa-solid fa-trash js-trash"></i>  
+                     <i class="fa-solid fa-arrow-{{#if sortOrder}}down-1-9{{else}}up-9-1{{/if}} Chand js-sortDate"></i>
+                     <i class="fa-solid fa-business-time {{#if private}}[privated]{{/if}}"></i> 
+                </div>
+                    <div class="row my-4">
+                      Days Due&nbsp; 
+                      {{dueDays}}
+                    </div>
                 </li> 
                 {{/each}}
                   </ul> 

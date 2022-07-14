@@ -42,35 +42,35 @@ Template.AddProf.events({
       let NTask = $("NT").val(); 
       let DateT = $("DT").val();   
 
-      if ($(".fa-xmark").hasClass("d-none")) {
-         $(".fa-xmark").removeClass("d-none");
-         $(".fa-check").addClass("d-none"); 
-      }
-      
+    
 
       //  prompt("Your Info Has been saved"); 
 
 
       if (validateAddForm(fname, lname)) { 
-        Meteor.users.update({_id:Meteor.userId()}, 
-            {$set: {
-                "profile.FSex": sex,
-                "profile.FN": fname, 
-                "profile.LN": lname, 
-                // "profile.WebD": WebDesign,  
-                // "profile.WebM": Webmakeup, 
-                // "profile.FE": FEnd,
-                // "profile.BE": BEnd,
-                "profile.createdOn": new Date().getTime()
-            } 
+        // Meteor.users.update({_id:Meteor.userId()}, 
+        //     {$set: {
+        //         "profile.FSex": sex,
+        //         "profile.FN": fname, 
+        //         "profile.LN": lname, 
+        //         // "profile.WebD": WebDesign,  
+        //         // "profile.WebM": Webmakeup, 
+        //         // "profile.FE": FEnd,
+        //         // "profile.BE": BEnd,
+        //         "profile.createdOn": new Date().getTime()
+        //     } 
          
            
             
-        }); 
+        // }); 
         addNewTask();
        
     } //end IF 
-    
+      if ($(".fa-xmark").hasClass("d-none")) {
+         $(".fa-xmark").removeClass("d-none");
+         $(".fa-check").addClass("d-none"); 
+      }
+      
 }, 
   'click  .js-add5'() {
     $("#LModal").modal("show"); 
@@ -147,7 +147,6 @@ Template.AddProf.events({
         duedate =  date.parse(duedate, 'YYYY-MM-DD')
       }
          console.log("days remaining:", Math.round(date.subtract(duedate, new Date()).toDays())); 
-     
       if (validateTask(newTask)) {
           ToDodb.insert({
               "task": newTask,
